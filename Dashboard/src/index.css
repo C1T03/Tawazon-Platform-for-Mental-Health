@@ -1,0 +1,25 @@
+/* src/index.css */
+
+body {
+  margin: 0;
+  padding: 0;
+  direction: rtl; /* التأكد من وجود هذا السطر */
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* إضافة هذا إذا كنت تريد أن تكون عناصر MUI كلها RTL */
+.MuiTypography-root, .MuiButton-root, .MuiTextField-root, .MuiInputBase-root {
+  text-align: right !important;
+}
+::-webkit-scrollbar{
+  width:1px;
+}
+@font-face {
+    font-family: 'Dubai';
+    src: url('/Fonts_Dubai/Dubai-Regular.ttf');
+}

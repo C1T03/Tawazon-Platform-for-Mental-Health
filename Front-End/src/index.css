@@ -1,0 +1,48 @@
+@font-face {
+    font-family: 'Dubai-Bold';
+    src: url('/Fonts_Dubai/Dubai-Bold.ttf');
+}
+@font-face {
+    font-family: 'Dubai-Light';
+    src: url('/Fonts_Dubai/Dubai-Light.ttf');
+}
+@font-face {
+    font-family: 'Dubai-Medium';
+    src: url('/Fonts_Dubai/Dubai-Medium.ttf');
+}
+@font-face {
+    font-family: 'Dubai-Regular';
+    src: url('/Fonts_Dubai/Dubai-Regular.ttf');
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    text-align: right;
+    font-size: 2rem;
+    font-family: 'Dubai-Regular' !important;
+    background-color: #fcfdf8;
+    direction: rtl;
+/*background-color: #FCFDF8;*/
+}
+.active{
+    background-color: #4faa85;
+    margin: 8px;
+    padding: 8px;
+    color: #ffff !important;
+    transition: ease-in-out .5s;
+    border-radius: 5px;
+    font-weight: 700;
+}
+::selection{
+    background-color: #4faa85;
+    color: #ffff;
+}
+::-webkit-scrollbar{
+    width: 0px;
+}
+p{
+    font-size: 1.2rem;
+}

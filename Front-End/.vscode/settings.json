@@ -1,0 +1,11 @@
+{
+    "background.fullscreen": {
+
+        "images": ["https://th.wallhaven.cc/lg/5g/5g22q5.jpg"],
+        "opacity": 0.1,
+        "size": "cover",
+        "position": "center",
+        "interval": 0,
+        "random": false
+    }
+}
