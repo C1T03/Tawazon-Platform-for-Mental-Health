@@ -1,0 +1,272 @@
+/* Enhanced Dashboard Styles with Dark Mode Support */
+
+/* Font Faces */
+@font-face {
+  font-family: 'Dubai';
+  src: url('/Fonts_Dubai/Dubai-Regular.ttf');
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Dubai';
+  src: url('/Fonts_Dubai/Dubai-Bold.ttf');
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Dubai';
+  src: url('/Fonts_Dubai/Dubai-Medium.ttf');
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Dubai';
+  src: url('/Fonts_Dubai/Dubai-Light.ttf');
+  font-weight: 300;
+  font-display: swap;
+}
+
+/* إصلاح مشاكل النظام المظلم */
+[data-theme="dark"] {
+  color-scheme: dark;
+}
+
+[data-theme="light"] {
+  color-scheme: light;
+}
+
+/* إصلاح ألوان النصوص في النظام المظلم */
+[data-theme="dark"] .MuiTypography-root {
+  color: #f8fafc !important;
+}
+
+[data-theme="dark"] .MuiTableCell-root {
+  color: #f8fafc !important;
+  border-bottom-color: #334155 !important;
+}
+
+[data-theme="dark"] .MuiPaper-root {
+  background-color: #1e293b !important;
+  color: #f8fafc !important;
+}
+
+/* إصلاح ألوان الخلفيات الثابتة */
+[data-theme="dark"] .MuiDialog-paper {
+  background-color: #1e293b !important;
+}
+
+[data-theme="dark"] .MuiTextField-root .MuiOutlinedInput-root {
+  background-color: #334155 !important;
+  color: #f8fafc !important;
+}
+
+[data-theme="dark"] .MuiTextField-root .MuiInputLabel-root {
+  color: #cbd5e1 !important;
+}
+
+[data-theme="dark"] .MuiSelect-root {
+  background-color: #334155 !important;
+  color: #f8fafc !important;
+}
+
+/* إصلاح مشاكل إضافية في النظام المظلم */
+[data-theme="dark"] .MuiChip-root {
+  background-color: #334155 !important;
+  color: #f8fafc !important;
+}
+
+[data-theme="dark"] .MuiButton-root {
+  color: #f8fafc !important;
+}
+
+[data-theme="dark"] .MuiButton-outlined {
+  border-color: #334155 !important;
+}
+
+[data-theme="dark"] .MuiIconButton-root {
+  color: #cbd5e1 !important;
+}
+
+[data-theme="dark"] .MuiTab-root {
+  color: #cbd5e1 !important;
+}
+
+[data-theme="dark"] .MuiTab-root.Mui-selected {
+  color: #4faa84 !important;
+}
+
+/* إصلاح ألوان الرسوم البيانية */
+[data-theme="dark"] canvas {
+  filter: brightness(1.1);
+}
+
+/* إصلاح ألوان الجداول */
+[data-theme="dark"] .MuiTableHead-root {
+  background-color: #334155 !important;
+}
+
+[data-theme="dark"] .MuiTableRow-root:hover {
+  background-color: #475569 !important;
+}
+
+/* إصلاح ألوان النماذج */
+[data-theme="dark"] .MuiFormLabel-root {
+  color: #cbd5e1 !important;
+}
+
+[data-theme="dark"] .MuiOutlinedInput-notchedOutline {
+  border-color: #475569 !important;
+}
+
+[data-theme="dark"] .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+  border-color: #64748b !important;
+}
+
+/* إصلاح ألوان القوائم المنسدلة */
+[data-theme="dark"] .MuiMenu-paper {
+  background-color: #1e293b !important;
+  color: #f8fafc !important;
+}
+
+[data-theme="dark"] .MuiMenuItem-root {
+  color: #f8fafc !important;
+}
+
+[data-theme="dark"] .MuiMenuItem-root:hover {
+  background-color: #334155 !important;
+}
+
+/* Root Variables for Theme */
+:root {
+  --transition-duration: 0.3s;
+  --border-radius: 12px;
+  --shadow-light: 0 1px 3px rgba(0,0,0,0.1), 0 1px 2px rgba(0,0,0,0.06);
+  --shadow-dark: 0 4px 6px -1px rgba(0,0,0,0.3), 0 2px 4px -1px rgba(0,0,0,0.2);
+}
+
+/* Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  direction: rtl;
+  font-family: 'Dubai', 'Tajawal', Arial, sans-serif;
+  transition: background-color var(--transition-duration) ease, color var(--transition-duration) ease;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* RTL Support for MUI Components */
+.MuiTypography-root, 
+.MuiButton-root, 
+.MuiTextField-root, 
+.MuiInputBase-root {
+  text-align: right !important;
+}
+
+/* Enhanced Scrollbar Styles */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  transition: background var(--transition-duration) ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+/* Dark mode scrollbar */
+[data-theme="dark"] ::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Smooth Transitions for Theme Changes */
+.theme-transition {
+  transition: background-color var(--transition-duration) ease,
+              color var(--transition-duration) ease,
+              border-color var(--transition-duration) ease,
+              box-shadow var(--transition-duration) ease;
+}
+
+/* Focus Styles */
+.MuiButton-root:focus-visible,
+.MuiIconButton-root:focus-visible {
+  outline: 2px solid #4faa84;
+  outline-offset: 2px;
+}
+
+/* Loading Animation */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.loading-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Chart Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.chart-container {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Responsive Utilities */
+@media (max-width: 768px) {
+  .hide-mobile {
+    display: none !important;
+  }
+}
+
+@media (min-width: 769px) {
+  .hide-desktop {
+    display: none !important;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  body {
+    background: white !important;
+    color: black !important;
+  }
+}
